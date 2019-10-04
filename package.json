@@ -27,9 +27,11 @@
     "gatsby-plugin-styled-components": "^3.0.7",
     "gatsby-plugin-typescript": "^2.0.15",
     "gatsby-source-filesystem": "^2.0.38",
+    "mixin-deep": "^2.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
+    "set-value": "^3.0.1",
     "styled-components": "^4.2.1"
   },
   "devDependencies": {
