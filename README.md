@@ -1,4 +1,24 @@
-# cesarsg.com
-Cesar Salazar New Website, Now using SSR , Gatsby and p5.js to render JS Animation. Also mobile integration.
+# Gatsby Typescript Starter
 
-Interesting JS parts will be highlighted in this section!
+This starter includes
+
+- Typescript
+- Styled Components
+- Google Analytics
+
+## installation
+
+
+```bash
+gatsby new name https://github.com/charlie632/gatsby-basic-ts-starter
+```
+
+```bash
+yarn install
+```
+
+Add your google analytics tracking id in `gatsby-config`
+
+```bash
+gatsby develop
+```
