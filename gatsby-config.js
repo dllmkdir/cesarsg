@@ -38,9 +38,9 @@ module.exports = {
     `gatsby-plugin-styled-components`,
   ],
   siteMetadata: {
-    title: "gatsby-basic-ts-starter",
-    author: `Carlos Ortiz`,
-    description: `Starter`,
+    title: "cesarsg.com",
+    author: `Emmet Romo`,
+    description: `Official Cesar Salazar Site`,
     siteUrl: `http://localhost:8000`,
   },
 }
