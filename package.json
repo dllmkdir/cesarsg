@@ -8,7 +8,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "npm run develop",
+    "dev": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "lint": "eslint ./src/**/*.{ts,tsx}"
@@ -37,6 +37,7 @@
     "react-helmet": "^5.2.1",
     "react-hot-loader": "^4.12.14",
     "react-particles-js": "^2.7.0",
+    "react-scroll-parallax": "^2.3.4",
     "set-value": "^3.0.1",
     "styled-components": "^4.2.1"
   },
