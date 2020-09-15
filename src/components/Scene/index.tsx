@@ -1,9 +1,12 @@
-import React from "react"
+import React, { useContext } from "react"
+import StageDivider from "../Stages"
+import { StageContext } from "../Stages/context"
 import { useStyles } from "./styles"
 interface SceneProps {
   position?: "center" | "right" | "left"
   wide: boolean
   background?: string
+  stage: number
 }
 // Scenarios render
 // set if we need widescreen,
@@ -13,9 +16,11 @@ const Scene: React.FC<SceneProps> = ({
   position,
   wide,
   background,
+  stage,
 }) => {
   // @ts-ignore
   const classes = useStyles()
+  const { stage: stageTemp } = useContext(StageContext)
   //get appropriate class
   const getClass = (): string => {
     let classMessage = ""
@@ -36,8 +41,14 @@ const Scene: React.FC<SceneProps> = ({
   }
 
   return (
-    <div className={getClass()} style={{ backgroundImage: background }}>
-      {children}
+    //   background content
+    <div style={{ background }}>
+      {/* Centered content div */}
+      <div className={getClass()}>
+        {children}
+        <p style={{ color: "red" }}>{stageTemp}</p>
+        <StageDivider stage={stage} />
+      </div>
     </div>
   )
 }
