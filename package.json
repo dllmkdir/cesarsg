@@ -38,7 +38,7 @@
     "react-hot-loader": "^4.12.14",
     "react-particles-js": "^2.7.0",
     "react-scroll-parallax": "^2.3.4",
-    "set-value": "^3.0.1",
+    "set-value": "^2.0.1",
     "styled-components": "^4.2.1"
   },
   "devDependencies": {
