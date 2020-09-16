@@ -12,6 +12,7 @@ import { Grid, Button } from "@material-ui/core"
 import { StageContext, StageProvider } from "../components/Stages/context"
 import StageDivider from "../components/Stages"
 import Username from "../components/Navbar/Username"
+import ArrowDown from "../components/Springs/ArrowDown"
 // Index for cesarsg.com SPA
 const Index: React.FC = () => {
   const { stage } = useContext(StageContext)
@@ -31,16 +32,7 @@ const Index: React.FC = () => {
               alignItems: "center",
             }}
           >
-            <ArrowDownwardIcon
-              style={{
-                color: "white",
-                width: 50,
-                height: 50,
-                background: "linear-gradient(135deg, #5ee7df 0%, #b490ca 100%)",
-                borderRadius: 50,
-                padding: "1rem",
-              }}
-            />
+            <ArrowDown />
           </div>
         </Parallax>
       </Scene>
@@ -57,10 +49,10 @@ const Index: React.FC = () => {
 
       <Scene wide position={"left"} stage={3}>
         <div>
-          <Parallax className="custom-class" x={[6, -6]} tagOuter="figure">
+          <Parallax className="custom-class" x={[6, -0]} tagOuter="figure">
             <h2>Crecí en Naucalpan de Juárez, Estado de México.</h2>
           </Parallax>
-          <Parallax className="custom-class" x={[-6, 6]} tagOuter="figure">
+          <Parallax className="custom-class" x={[-6, 0]} tagOuter="figure">
             <h2 style={{ paddingTop: "15vh", width: "70%" }}>
               Desde pequeño estuve interesado en todo lo que tuviera que ver con
               la música y la forma en la que se produce.
@@ -135,6 +127,7 @@ const Index: React.FC = () => {
       >
         <h3>Algo está mal...</h3>
       </Scene>
+
       <Scene wide stage={9} background="black">
         <h3>No sabes qué sucede. Y de pronto...</h3>
       </Scene>
@@ -152,6 +145,7 @@ const Index: React.FC = () => {
           comentarte lo que a mi me gusta hacer:
         </h3>
       </Scene>
+
       <Scene wide stage={12} background="#151827">
         <div>
           <PopBlock bg="linear-gradient(135deg, #f6d365 0%, #fda085 100%)">
