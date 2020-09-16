@@ -16,13 +16,13 @@ export const useStyles = makeStyles((theme: Theme) => ({
     },
   },
   icon: {
-    color: "white",
+    color: "white !important",
   },
   sliderBox: {
     flex: "80%",
   },
   slider: {
-    color: "white",
+    color: "white !important",
   },
 }))
 

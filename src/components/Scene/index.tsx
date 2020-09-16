@@ -46,7 +46,7 @@ const Scene: React.FC<SceneProps> = ({
       {/* Centered content div */}
       <div className={getClass()}>
         {children}
-        <p style={{ color: "red" }}>{stageTemp}</p>
+        {/* <p style={{ color: "red" }}>{stageTemp}</p> */}
         <StageDivider stage={stage} />
       </div>
     </div>

@@ -11,18 +11,19 @@ import PopBlock from "../components/PopBlock"
 import { Grid, Button } from "@material-ui/core"
 import { StageContext, StageProvider } from "../components/Stages/context"
 import StageDivider from "../components/Stages"
+import Username from "../components/Navbar/Username"
 // Index for cesarsg.com SPA
 const Index: React.FC = () => {
-  const { username } = useContext(UserContext)
   const { stage } = useContext(StageContext)
   return (
     <Layout>
       <Scene wide position={"center"} stage={1}>
         <Parallax className="custom-class" y={[20, -20]} tagOuter="figure">
           <h2>
-            Hola, <b>{username || "usuario"}</b>. Gracias por visitar mi sitio
-            web. Por si el nombre del sitio no fuera evidente, me presento.
+            Hola, <Username />. Gracias por visitar mi sitio web.
           </h2>
+          <h2> Por si el nombre del sitio no fuera evidente, me presento.</h2>
+
           <div
             style={{
               display: "flex",
@@ -140,19 +141,18 @@ const Index: React.FC = () => {
 
       <Scene
         wide
-        stage={9}
+        stage={10}
         background="linear-gradient(to bottom, #000000, #0d060a, #140c15, #17121e, #151827)"
       ></Scene>
 
-      <Scene wide stage={10} background="#151827">
+      <Scene wide stage={11} background="#151827">
         <h3>
           Como podrás ver, el sonido es una herramienta impresionante cuando se
-          trata de comunicar un mensaje, y para eso,{" "}
-          <b>{username || "usuario"}</b>, puedo comentarte lo que a mi me gusta
-          hacer:
+          trata de comunicar un mensaje, y para eso, <Username />, puedo
+          comentarte lo que a mi me gusta hacer:
         </h3>
       </Scene>
-      <Scene wide stage={11} background="#151827">
+      <Scene wide stage={12} background="#151827">
         <div>
           <PopBlock bg="linear-gradient(135deg, #f6d365 0%, #fda085 100%)">
             <h2>Edición de sonido para video</h2>
@@ -198,18 +198,18 @@ const Index: React.FC = () => {
           </Grid>
         </div>
       </Scene>
-      <Scene wide position="center" stage={12} background="#151827">
+      <Scene wide position="center" stage={13} background="#151827">
         <div>
           <h3>
-            Bueno, <b>{username || "usuario"}</b>, quería comentarte que todos
-            los sonidos utilizados en este sitio están disponibles de forma
-            gratuita para su descarga, sigue bajando para encontrarlos. Gracias
-            por visitar mi sitio.
+            Bueno, <Username />, quería comentarte que todos los sonidos
+            utilizados en este sitio están disponibles de forma gratuita para su
+            descarga, sigue bajando para encontrarlos. Gracias por visitar mi
+            sitio.
           </h3>
           <h3>Vuelve pronto por más sonidos.</h3>
         </div>
       </Scene>
-      <Scene wide position="center" stage={13} background="#151827">
+      <Scene wide position="center" stage={14} background="#151827">
         <div>
           <Grid container>
             <Grid item xs={4}>
