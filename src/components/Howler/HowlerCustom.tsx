@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import ReactHowler from "react-howler"
 import PropTypes from "prop-types"
+import { isIOS } from "react-device-detect"
 type HowlerCustomProps = {
   volume: number
   playing: boolean
@@ -85,7 +86,7 @@ class HowlerCustom extends Component<HowlerCustomProps, HowlerCustomState> {
         playing={this.props.kickPlay}
         volume={this.state.internal_volume}
         loop={this.props.loop}
-        html5
+        html5={!isIOS}
       />
     )
   }
