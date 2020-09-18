@@ -1,0 +1,10 @@
+{
+  "timestamp": 1600401629500,
+  "hash": "53260b0eb5ca3cf626e0786300172b67",
+  "assets": {
+    "/": { "/fonts/Open_Sans/OpenSans-SemiBold.ttf": true },
+    "/dev-404-page/": { "/fonts/Open_Sans/OpenSans-SemiBold.ttf": true },
+    "/404/": { "/fonts/Open_Sans/OpenSans-SemiBold.ttf": true },
+    "/404.html": { "/fonts/Open_Sans/OpenSans-SemiBold.ttf": true }
+  }
+}

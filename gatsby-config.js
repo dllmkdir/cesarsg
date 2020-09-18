@@ -27,6 +27,7 @@ module.exports = {
     },
     `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-preload-fonts`,
   ],
   siteMetadata: {
     title: "Cesar Salazar | Audio Engineer",

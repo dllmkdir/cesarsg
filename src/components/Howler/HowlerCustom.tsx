@@ -80,9 +80,10 @@ class HowlerCustom extends Component<HowlerCustomProps, HowlerCustomState> {
     return (
       <ReactHowler
         src={path}
-        playing={true}
+        playing
         volume={this.state.internal_volume}
         loop={this.props.loop}
+        html5
       />
     )
   }

@@ -52,7 +52,7 @@ const IndexComponent: React.FC = () => {
 
       <Scene wide position={"left"} stage={3}>
         <div>
-          <Parallax x={[5, -5]}>
+          <Parallax x={[10, -5]}>
             <h2>
               Crecí en Naucalpan de Juárez,{" "}
               <Highlight type="text">Estado de México.</Highlight>
@@ -186,12 +186,12 @@ const IndexComponent: React.FC = () => {
             </div>
           </PopBlock>
           <Grid container>
-            <Grid xs={12} sm={6}>
+            <Grid item xs={12} sm={6}>
               <PopBlock bg="linear-gradient(to right, #a55bbd, #cc2b5e)">
                 <h2 style={{ textAlign: "center" }}>Producción de Streaming</h2>
               </PopBlock>
             </Grid>
-            <Grid xs={12} sm={6}>
+            <Grid item xs={12} sm={6}>
               <PopBlock bg="linear-gradient(to right, #fbc7d4, #9796f0)">
                 <h2 style={{ textAlign: "center" }}>Producción Musical</h2>
               </PopBlock>

@@ -11,7 +11,8 @@
     "dev": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "lint": "eslint ./src/**/*.{ts,tsx}"
+    "lint": "eslint ./src/**/*.{ts,tsx}",
+    "preload-fonts": "gatsby-preload-fonts"
   },
   "dependencies": {
     "@hot-loader/react-dom": "^16.9.0",
@@ -24,6 +25,7 @@
     "gatsby": "^2.8.0",
     "gatsby-plugin-google-analytics": "^2.0.20",
     "gatsby-plugin-manifest": "^2.1.1",
+    "gatsby-plugin-preload-fonts": "^1.2.25",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-typescript": "^2.0.15",
     "gatsby-source-filesystem": "^2.0.38",
@@ -33,6 +35,7 @@
     "react-helmet": "^5.2.1",
     "react-hot-loader": "^4.12.14",
     "react-howler": "^3.8.0",
+    "react-imported-component": "^6.3.13",
     "react-particles-js": "^2.7.0",
     "react-scroll-parallax": "^2.3.4",
     "react-spring": "^8.0.27",

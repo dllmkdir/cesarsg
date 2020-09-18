@@ -14,13 +14,13 @@ const Sound: React.SFC<SoundProps> = memo(({ volume }) => {
       <HowlerCustom
         path="/audio/space/Music/Space_Music_Loop_01.mp3"
         playing={stage === 1}
-        volume={volume * 0.6}
+        volume={volume * 0.8}
         loop
       />
       <HowlerCustom
         path="/audio/space/ambience/Space_Ambience_1.mp3"
         playing={stage === 2}
-        volume={volume * 0.8}
+        volume={volume * 0.6}
         loop
       />
       <HowlerCustom
@@ -70,7 +70,7 @@ const Sound: React.SFC<SoundProps> = memo(({ volume }) => {
       <HowlerCustom
         path="/audio/space/Music/Space_Music_Loop_04.mp3"
         playing={stage > 12}
-        volume={volume * 0.6}
+        volume={volume * 0.5}
         loop
       />
 

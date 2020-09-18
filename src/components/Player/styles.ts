@@ -20,6 +20,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
   },
   sliderBox: {
     flex: "80%",
+    marginRight: 10,
     [theme.breakpoints.down("xs")]: {
       display: "none",
     },

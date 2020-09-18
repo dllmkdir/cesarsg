@@ -1,5 +1,6 @@
 import { CircularProgress } from "@material-ui/core"
-import React, { lazy, Suspense } from "react"
+import React from "react"
+import { lazy, LazyBoundary } from "react-imported-component"
 import { ParallaxProvider } from "react-scroll-parallax"
 import { UserProvider } from "../components/User/userContext"
 import { StageProvider } from "../components/Stages/context"
@@ -12,7 +13,7 @@ const IndexWrapper: React.FC = () => {
     return <Unsupported />
   }
   return (
-    <Suspense fallback={<Fallback />}>
+    <LazyBoundary fallback={<Fallback />}>
       <StageProvider>
         <ParallaxProvider>
           <UserProvider>
@@ -20,7 +21,7 @@ const IndexWrapper: React.FC = () => {
           </UserProvider>
         </ParallaxProvider>
       </StageProvider>
-    </Suspense>
+    </LazyBoundary>
   )
 }
 //pure css loader fallback
