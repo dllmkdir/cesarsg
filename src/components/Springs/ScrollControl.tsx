@@ -25,33 +25,45 @@ const ScrollControl: React.SFC<ScrollControlProps> = () => {
   const moveDown = () => {
     const SceneHeight = window.innerHeight * 0.9
     const windowResidue = window.scrollY % SceneHeight
+    // const windowResidue =
+    //   window.innerHeight * 0.9 - (window.scrollY % (window.innerHeight * 0.9))
     let offset = 0
     if (windowResidue >= SceneHeight / 2) {
       offset = Math.abs(windowResidue - SceneHeight)
     } else {
-      offset = windowResidue
+      offset = SceneHeight - windowResidue
     }
+    if (offset < 2) {
+      offset = SceneHeight
+    }
+    console.log(windowResidue)
     console.log(offset)
+    console.log("TOtal:" + (SceneHeight - offset))
     window.scrollTo({
-      top: window.scrollY + SceneHeight - offset,
+      top: window.scrollY + offset,
       left: 0,
       behavior: "smooth",
     })
   }
   const moveUp = () => {
     const SceneHeight = window.innerHeight * 0.9
-    //offset complement
-    let offset =
+    // const windowResidue = window.scrollY % SceneHeight
+    const windowResidue =
       window.innerHeight * 0.9 - (window.scrollY % (window.innerHeight * 0.9))
-    if (offset > SceneHeight / 2) {
-      offset = Math.abs(offset - SceneHeight)
-      console.log("offf")
+    let offset = 0
+    if (windowResidue >= SceneHeight / 2) {
+      offset = Math.abs(windowResidue - SceneHeight)
     } else {
-      console.log("wow")
+      offset = SceneHeight - windowResidue
     }
+    if (offset < 2) {
+      offset = SceneHeight
+    }
+    console.log(windowResidue)
     console.log(offset)
+    console.log("TOtal:" + (SceneHeight - offset))
     window.scrollTo({
-      top: window.scrollY - window.innerHeight * 0.9 + offset,
+      top: window.scrollY - offset,
       left: 0,
       behavior: "smooth",
     })
