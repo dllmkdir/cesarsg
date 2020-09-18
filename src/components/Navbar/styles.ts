@@ -29,5 +29,8 @@ export const useStyles = makeStyles((theme: Theme) => ({
     "&:focus": {
       outline: "none",
     },
+    [theme.breakpoints.down("xs")]: {
+      display: "none",
+    },
   },
 }))

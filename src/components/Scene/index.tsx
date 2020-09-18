@@ -42,12 +42,25 @@ const Scene: React.FC<SceneProps> = ({
 
   return (
     //   background content
-    <div style={{ background }}>
-      {/* Centered content div */}
-      <div className={getClass()}>
-        {children}
-        <p style={{ color: "red" }}>{stageTemp}</p>
-        <StageDivider stage={stage} />
+    <div
+      style={{
+        background,
+      }}
+    >
+      {/* Max Width Div */}
+      <div
+        style={{
+          maxWidth: 1400,
+          display: "block",
+          margin: "0 auto",
+        }}
+      >
+        {/* Centered content div */}
+        <div className={getClass()}>
+          {children}
+          {/* <p style={{ color: "red" }}>{stageTemp}</p> */}
+          <StageDivider stage={stage} />
+        </div>
       </div>
     </div>
   )

@@ -15,32 +15,24 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "",
-      },
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `uniquer artistry`,
-        short_name: `unique artistry`,
+        name: `Cesar Salazar`,
+        short_name: `Cesarsg`,
         start_url: `/`,
-        background_color: `#ffffff`,
+        background_color: `#000000`,
         theme_color: `#000000`,
         display: `minimal-ui`,
-        icon: `content/assets/icon.png`,
+        icon: `static/favicon.ico`,
       },
     },
-
     `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-styled-components`,
   ],
   siteMetadata: {
-    title: "cesarsg.com",
+    title: "Cesar Salazar | Audio Engineer",
     author: `Emmet Romo`,
-    description: `Official Cesar Salazar Site`,
-    siteUrl: `http://localhost:8000`,
+    description: `Official Cesar Salazar Site. Audio Engineer.`,
+    siteUrl: `https://www.cesarsg.com`,
   },
 }

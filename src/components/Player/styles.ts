@@ -20,6 +20,9 @@ export const useStyles = makeStyles((theme: Theme) => ({
   },
   sliderBox: {
     flex: "80%",
+    [theme.breakpoints.down("xs")]: {
+      display: "none",
+    },
   },
   slider: {
     color: "white !important",

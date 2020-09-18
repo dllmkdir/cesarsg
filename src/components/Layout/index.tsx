@@ -1,17 +1,24 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import styled from "styled-components"
-import { navigate } from "gatsby"
-import Navbar from '../Navbar/index'
-import ParticlesWrapper from '../Particles/index'
+import Navbar from "../Navbar/index"
+// @ts-ignore
+import favicon from "../../../static/favicon.ico"
+import ParticlesWrapper from "../Particles/index"
 import { StaticQuery, graphql } from "gatsby"
+import ScrollControl from "../Springs/ScrollControl"
 const Layout: React.FC = ({ children }) => (
   <div>
     <StaticQuery
       query={detailsQuery}
       render={data => {
         const metaDescription = data.site.siteMetadata.description
-        const keywords = ["starter"]
+        const keywords = [
+          "cesarsg",
+          "César Salazar",
+          "Audio Engineer",
+          "Music",
+          "Inmersive Experience",
+        ]
 
         return (
           <>
@@ -45,8 +52,8 @@ const Layout: React.FC = ({ children }) => (
                 {
                   resolve: {
                     alias: {
-                      'react-dom': '@hot-loader/react-dom'
-                    }
+                      "react-dom": "@hot-loader/react-dom",
+                    },
                   },
                   name: `twitter:title`,
                   content: data.site.siteMetadata.title,
@@ -58,52 +65,41 @@ const Layout: React.FC = ({ children }) => (
               ].concat(
                 keywords.length > 0
                   ? {
-                    name: `keywords`,
-                    content: keywords.join(`, `),
-                  }
+                      name: `keywords`,
+                      content: keywords.join(`, `),
+                    }
                   : []
               )}
               style={[
                 {
                   cssText: `
                       @font-face {
-                        font-family: "Open Sans Extrabold";
-                        src: url("fonts/Open_Sans/OpenSans-ExtraBold.ttf") format("truetype");
-                      }
-                      @font-face {
                         font-family: "Open Sans Semibold";
                         src: url("fonts/Open_Sans/OpenSans-SemiBold.ttf") format("truetype");
-                      }
-                      @font-face {
-                        font-family: "Open Sans Regular";
-                        src: url("fonts/Open_Sans/OpenSans-Regular.ttf") format("truetype");
-                      }
-                      @font-face {
-                        font-family: "Open Sans Semibold Italic";
-                        src: url("fonts/Open_Sans/OpenSans-SemiBoldItalic.ttf") format("truetype");
-                      }
-                      body {
-                          height:100%;
-                          margin:0;
-                          padding:0;
-                          background-color:black;
                       }
                   `,
                 },
               ]}
-            />
+            >
+              <link rel="icon" href={favicon} />
+              <title>Cesar Salazar | Audio Engineer</title>
+            </Helmet>
             <ParticlesWrapper size={2} lineOpacity={0.5} />
             <ParticlesWrapper size={1.6} lineOpacity={0.02} />
             <ParticlesWrapper size={1} lineOpacity={0.02} />
-            <div id="main-block" style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%"
-            }}>
+            <div
+              id="main-block"
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+              }}
+            >
               <Navbar />
               {children}
+              <ScrollControl />
             </div>
           </>
         )

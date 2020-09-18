@@ -35,7 +35,7 @@ const ParticlesWrapper: React.FC<ParticleProps> = ({
       if (mobileStars) {
         setParticleNum(mobileStars)
       } else {
-        setParticleNum(40)
+        setParticleNum(48)
       }
     } else {
       //set default stars or custom dekstop stars

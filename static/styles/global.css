@@ -1,0 +1,74 @@
+body {
+  background: black;
+  overflow-x: hidden;
+}
+.text-presentation {
+  font-family: "Open Sans Semibold";
+  font-size: 1.6rem;
+  color: white;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.right-button {
+  margin-left: 0.6rem;
+}
+.slide-container {
+  display: flex;
+  align-items: center;
+  min-height: 91vh;
+
+  width: 100%;
+}
+.center-container {
+  justify-content: center;
+}
+.social-table {
+  display: flex;
+  justify-content: center;
+}
+.social-table a {
+  margin: 20px;
+  height: 60px;
+}
+.social-table img {
+  height: 50px;
+  width: 50px;
+  margin-top: 70px;
+}
+
+/* Loader */
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

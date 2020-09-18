@@ -1,7 +1,7 @@
 {
   "name": "cesarsg.com",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Cesar Salazar Audio Engineer",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
@@ -21,27 +21,22 @@
     "@types/react-helmet": "^5.0.8",
     "@types/styled-components": "^4.1.15",
     "babel-plugin-styled-components": "^1.10.0",
-    "eslint-utils": "^1.4.2",
     "gatsby": "^2.8.0",
     "gatsby-plugin-google-analytics": "^2.0.20",
     "gatsby-plugin-manifest": "^2.1.1",
     "gatsby-plugin-react-helmet": "^3.0.12",
-    "gatsby-plugin-styled-components": "^3.0.7",
     "gatsby-plugin-typescript": "^2.0.15",
     "gatsby-source-filesystem": "^2.0.38",
-    "lodash": "^4.17.15",
-    "mem": "^5.1.1",
-    "mixin-deep": "^2.0.1",
     "react": "^16.8.6",
+    "react-device-detect": "^1.13.1",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-hot-loader": "^4.12.14",
     "react-howler": "^3.8.0",
     "react-particles-js": "^2.7.0",
     "react-scroll-parallax": "^2.3.4",
-    "react-waypoint": "^9.0.3",
-    "set-value": "^3.0.1",
-    "styled-components": "^4.2.1"
+    "react-spring": "^8.0.27",
+    "react-waypoint": "^9.0.3"
   },
   "devDependencies": {
     "@types/react": "^16.8.19",
@@ -52,12 +47,5 @@
     "eslint-plugin-react": "^7.13.0",
     "prettier": "^1.17.1",
     "typescript": "^3.5.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }

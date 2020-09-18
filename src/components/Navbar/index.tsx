@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react"
 import { useStyles } from "./styles"
 import Player from "../Player/index"
-import { UserContext } from "./userContext"
+import { UserContext } from "../User/userContext"
 // @ts-ignore
 import logo from "../../../static/web-grande-blanco.png"
 // Navbar using Materila ui Components

@@ -1,16 +1,22 @@
-import React from "react"
+import { Grow } from "@material-ui/core"
+import React, { useState } from "react"
+import { Waypoint } from "react-waypoint"
+import HiddenWaypoint from "../Springs/HiddenWaypoint"
 import { useStyles } from "./styles"
 export interface PopBlockProps {
   bg: string
 }
 
 const PopBlock: React.SFC<PopBlockProps> = ({ bg, children }) => {
-  // @ts-ignore
   const classes = useStyles()
   return (
-    <div className={classes.block} style={{ background: bg }}>
-      {children}
-    </div>
+    <>
+      <HiddenWaypoint>
+        <div className={classes.block} style={{ background: bg }}>
+          {children}
+        </div>
+      </HiddenWaypoint>
+    </>
   )
 }
 
