@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import { useStyles, useStylesArrow } from "./styles"
 import VolumeUpRoundedIcon from "@material-ui/icons/VolumeUpRounded"
 import VolumeDownRoundedIcon from "@material-ui/icons/VolumeDownRounded"
@@ -11,6 +11,8 @@ import Sound from "../Howler/Sound"
 // The theme determines the music that is played
 interface PlayerProps {}
 const Player: React.FC<PlayerProps> = () => {
+  //create a ref to start the sounds
+  const kickPlayRef = useRef(false)
   //open or close tooltip
   const [tooltip, setTooltip] = useState<boolean>(false)
   //tooltip reference
@@ -33,6 +35,8 @@ const Player: React.FC<PlayerProps> = () => {
     } else {
       setVolume(1)
     }
+    //start playing music
+    kickPlayRef.current = true
   }
 
   const handleTooltip = () => {
@@ -105,7 +109,7 @@ const Player: React.FC<PlayerProps> = () => {
       </div>
 
       {/* Howler Sounds */}
-      <Sound volume={volume} />
+      <Sound volume={volume} kickPlayRef={kickPlayRef.current} />
     </div>
   )
 }

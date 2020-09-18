@@ -13,13 +13,13 @@ import useMediaQuery from "@material-ui/core/useMediaQuery"
 const useStyles = makeStyles((theme: Theme) => ({
   button: {
     cursor: "pointer",
-
     background: "linear-gradient(135deg, #5ee7df 0%, #b490ca 100%)",
     borderRadius: 50,
     padding: "0px !important",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    WebkitTapHighlightColor: "rgba(0,0,0,0)",
   },
   icon: {
     width: 50,

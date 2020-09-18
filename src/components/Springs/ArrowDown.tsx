@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useContext, useRef } from "react"
 import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward"
 import { animated, useSpring } from "react-spring"
-import { Theme } from "@material-ui/core"
-import { makeStyles } from "@material-ui/styles"
+import { makeStyles, Theme } from "@material-ui/core/styles"
 import { StageContext } from "../Stages/context"
 import { useTheme } from "@material-ui/core/styles"
 import useMediaQuery from "@material-ui/core/useMediaQuery"
@@ -18,11 +17,16 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    WebkitTapHighlightColor: "rgba(0,0,0,0)",
   },
   icon: {
     width: 50,
     height: 50,
     color: "white",
+    [theme.breakpoints.down("xs")]: {
+      width: 35,
+      height: 35,
+    },
   },
 }))
 const ArrowDown: React.SFC<ArrowDownProps> = () => {
@@ -34,7 +38,7 @@ const ArrowDown: React.SFC<ArrowDownProps> = () => {
   const { stage } = useContext(StageContext)
   const [hovered, setHovered] = useState(false)
   const [divProps, setDivProps] = useSpring(() => ({
-    padding: isXS ? 5 : 15,
+    padding: 15,
   }))
   // Hover Logic
   const toggleHover = () => setHovered(h => !h)
@@ -50,11 +54,12 @@ const ArrowDown: React.SFC<ArrowDownProps> = () => {
   useEffect(() => {
     if (stage === 1) {
       //be carful with big buttons for mobile devices
-      setDivProps({ padding: isXS ? 5 : 15 })
+      setDivProps({ padding: 15 })
     } else {
       setDivProps({ padding: 0 })
     }
-  }, [stage, isXS])
+  }, [stage])
+  useEffect(() => {}, [isXS])
   const handleClick = () => {
     setDivProps({ padding: 0 })
     window.scrollTo({

@@ -6,6 +6,7 @@ type HowlerCustomProps = {
   playing: boolean
   path: string
   loop?: boolean
+  kickPlay: boolean
 }
 type HowlerCustomState = {
   internal_volume: number
@@ -18,6 +19,7 @@ class HowlerCustom extends Component<HowlerCustomProps, HowlerCustomState> {
     volume: PropTypes.Validator<number>
     playing: PropTypes.Validator<boolean>
     loop?: PropTypes.Validator<boolean>
+    kickPlay: PropTypes.Validator<boolean>
   }
   interval: number
   constructor(props) {
@@ -80,7 +82,7 @@ class HowlerCustom extends Component<HowlerCustomProps, HowlerCustomState> {
     return (
       <ReactHowler
         src={path}
-        playing
+        playing={this.props.kickPlay}
         volume={this.state.internal_volume}
         loop={this.props.loop}
         html5
@@ -93,5 +95,6 @@ HowlerCustom.propTypes = {
   volume: PropTypes.number.isRequired,
   playing: PropTypes.bool.isRequired,
   loop: PropTypes.bool,
+  kickPlay: PropTypes.bool,
 }
 export default HowlerCustom

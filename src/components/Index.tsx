@@ -18,6 +18,7 @@ const IndexComponent: React.FC = () => {
   //check media query with hook
   const theme = useTheme()
   const isXS = useMediaQuery(theme.breakpoints.down("xs"))
+  const isSM = useMediaQuery(theme.breakpoints.down("sm"))
   return (
     <Layout>
       <Scene wide position={"center"} stage={1}>
@@ -52,13 +53,13 @@ const IndexComponent: React.FC = () => {
 
       <Scene wide position={"left"} stage={3}>
         <div>
-          <Parallax x={[10, -5]}>
+          <Parallax x={[10, -5]} disabled={isSM}>
             <h2>
               Crecí en Naucalpan de Juárez,{" "}
               <Highlight type="text">Estado de México.</Highlight>
             </h2>
           </Parallax>
-          <Parallax x={[-5, 5]}>
+          <Parallax x={[-5, 5]} disabled={isSM}>
             <h2 style={{ paddingTop: "15vh", width: "80%" }}>
               Desde pequeño estuve interesado en todo lo que tuviera que ver con
               la música y la forma en la que se produce.
@@ -68,7 +69,7 @@ const IndexComponent: React.FC = () => {
       </Scene>
 
       <Scene wide stage={4}>
-        <Parallax y={[60, -60]}>
+        <Parallax y={[60, -60]} disabled={isSM}>
           <h2 style={{ width: "60%" }}>
             Quisiera explicarte un poco lo que un ingeniero en audio puede
             hacer.
