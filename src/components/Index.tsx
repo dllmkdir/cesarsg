@@ -93,7 +93,8 @@ const IndexComponent: React.FC = () => {
             <HeadsetIcon
               style={{
                 color: "white",
-                transition: "all 0.5s",
+                position: "relative",
+                top: 5,
               }}
             />
           </h3>
