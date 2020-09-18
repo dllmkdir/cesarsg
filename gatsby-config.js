@@ -23,7 +23,6 @@ module.exports = {
         background_color: `#000000`,
         theme_color: `#000000`,
         display: `minimal-ui`,
-        icon: `static/favicon.ico`,
       },
     },
     `gatsby-plugin-typescript`,
