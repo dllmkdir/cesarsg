@@ -200,8 +200,8 @@ const IndexComponent: React.FC = () => {
                 bg="linear-gradient(to right, #a55bbd, #cc2b5e)"
                 style={{
                   padding: "0.6em",
-                  marginTop: "1em",
-                  marginBottom: "1em",
+                  marginTop: isXS ? "0em" : "1em",
+                  marginBottom: isXS ? "0.5em" : "1em",
                 }}
               >
                 <h3
@@ -219,8 +219,8 @@ const IndexComponent: React.FC = () => {
                 bg="linear-gradient(to right, #fbc7d4, #9796f0)"
                 style={{
                   padding: "0.6em",
-                  marginTop: "1em",
-                  marginBottom: "1em",
+                  marginTop: isXS ? "0.5em" : "1em",
+                  marginBottom: isXS ? "0.5em" : "1em",
                 }}
               >
                 <h3 style={{ textAlign: "center" }}>Producción Musical</h3>
@@ -249,7 +249,10 @@ const IndexComponent: React.FC = () => {
                 <Grid container justify="center" alignItems="center">
                   <a
                     href="https://mega.nz/#!Gh0ggQxA!KC9UVaZBlID34m8mMeF0p_GGV0TJjFgUo1xaMq1Ano4"
-                    style={{ textDecoration: "none" }}
+                    style={{
+                      textDecoration: "none",
+                      WebkitTapHighlightColor: "rgba(0,0,0,0)",
+                    }}
                   >
                     <Button
                       variant="contained"
@@ -261,6 +264,7 @@ const IndexComponent: React.FC = () => {
                         color: "white",
                         fontFamily: "Open sans Semibold",
                         margin: isXS ? "2em" : "3em",
+                        WebkitTapHighlightColor: "rgba(0,0,0,0)",
                       }}
                     >
                       Descargar Librería
@@ -273,7 +277,10 @@ const IndexComponent: React.FC = () => {
                 <Grid container justify="center" alignItems="center">
                   <a
                     href="https://mega.nz/#!GwdhGKha!DZkKWddN4nIni0kjYb7b5keBq6AKatXJmHNFOh3hAzc"
-                    style={{ textDecoration: "none" }}
+                    style={{
+                      textDecoration: "none",
+                      WebkitTapHighlightColor: "rgba(0,0,0,0)",
+                    }}
                   >
                     <Button
                       variant="contained"
@@ -285,6 +292,7 @@ const IndexComponent: React.FC = () => {
                         textTransform: "capitalize",
                         fontFamily: "Open sans Semibold",
                         margin: "3em",
+                        WebkitTapHighlightColor: "rgba(0,0,0,0)",
                       }}
                     >
                       Descargar Librería <br /> (Ambience) <CloudDownloadIcon />
@@ -296,7 +304,10 @@ const IndexComponent: React.FC = () => {
                 <Grid container justify="center" alignItems="center">
                   <a
                     href="https://mega.nz/#!CpNXGaRS!pGXueIYHlp_SVjAANgtlUzm6UCGm27b8L7UikODbTNQ"
-                    style={{ textDecoration: "none" }}
+                    style={{
+                      textDecoration: "none",
+                      WebkitTapHighlightColor: "rgba(0,0,0,0)",
+                    }}
                   >
                     <Button
                       variant="contained"
@@ -309,6 +320,7 @@ const IndexComponent: React.FC = () => {
                         fontFamily: "Open sans Semibold",
                         margin: "3em",
                         backgroundColor: "rgb(192, 56, 201)",
+                        WebkitTapHighlightColor: "rgba(0,0,0,0)",
                       }}
                     >
                       Descargar Librería <br /> (SFX) <CloudDownloadIcon />
@@ -323,18 +335,25 @@ const IndexComponent: React.FC = () => {
               alignItems="center"
               style={{ padding: 40, marginBottom: isXS ? 30 : 0 }}
             >
-              <a href="https://www.facebook.com/profile.php?id=100023781759905">
+              <a
+                href="https://www.facebook.com/profile.php?id=100023781759905"
+                style={{ WebkitTapHighlightColor: "rgba(0,0,0,0)" }}
+              >
                 <img
                   src="/fb.png"
                   alt={""}
                   style={{
+                    WebkitTapHighlightColor: "rgba(0,0,0,0)",
                     width: isXS ? 48 : 80,
                     height: isXS ? 48 : 80,
                     padding: isXS ? 10 : 20,
                   }}
                 />
               </a>
-              <a href="https://www.instagram.com/cesarsalazarg">
+              <a
+                href="https://www.instagram.com/cesarsalazarg"
+                style={{ WebkitTapHighlightColor: "rgba(0,0,0,0)" }}
+              >
                 <img
                   src="/ig.png"
                   alt={""}
@@ -346,11 +365,15 @@ const IndexComponent: React.FC = () => {
                 />
               </a>
 
-              <a href="https://soundcloud.com/cesar-salazar-570942046">
+              <a
+                href="https://soundcloud.com/cesar-salazar-570942046"
+                style={{ WebkitTapHighlightColor: "rgba(0,0,0,0)" }}
+              >
                 <img
                   src="/sc.png"
                   alt={""}
                   style={{
+                    WebkitTapHighlightColor: "rgba(0,0,0,0)",
                     width: isXS ? 48 : 80,
                     height: isXS ? 48 : 80,
                     padding: isXS ? 10 : 20,
