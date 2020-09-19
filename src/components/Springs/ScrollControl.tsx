@@ -3,6 +3,7 @@ import React from "react"
 import ScrollButton from "./ScrollButton"
 import ExpandLessIcon from "@material-ui/icons/ExpandLess"
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
+import { isMobile } from "react-device-detect"
 export interface ScrollControlProps {}
 const useStyles = makeStyles(() => ({
   root: {
@@ -24,7 +25,13 @@ const useStyles = makeStyles(() => ({
 const ScrollControl: React.SFC<ScrollControlProps> = () => {
   const classes = useStyles()
   const moveDown = () => {
-    const SceneHeight = window.innerHeight * 0.9
+    let SceneHeight
+    if (isMobile) {
+      SceneHeight = window.visualViewport.height * 0.9
+    } else {
+      SceneHeight = window.innerHeight * 0.9
+    }
+
     const windowResidue = window.scrollY % SceneHeight
     // const windowResidue =
     //   window.innerHeight * 0.9 - (window.scrollY % (window.innerHeight * 0.9))
@@ -47,7 +54,12 @@ const ScrollControl: React.SFC<ScrollControlProps> = () => {
     })
   }
   const moveUp = () => {
-    const SceneHeight = window.innerHeight * 0.9
+    let SceneHeight
+    if (isMobile) {
+      SceneHeight = window.visualViewport.height * 0.9
+    } else {
+      SceneHeight = window.innerHeight * 0.9
+    }
     // const windowResidue = window.scrollY % SceneHeight
     const windowResidue =
       window.innerHeight * 0.9 - (window.scrollY % (window.innerHeight * 0.9))
