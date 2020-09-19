@@ -19,6 +19,9 @@ const IndexComponent: React.FC = () => {
   const theme = useTheme()
   const isXS = useMediaQuery(theme.breakpoints.down("xs"))
   const isSM = useMediaQuery(theme.breakpoints.down("sm"))
+  const isthatNaggyBlock = useMediaQuery(
+    "(min-width:960px) and (max-width:1120px)"
+  )
   return (
     <Layout>
       <Scene wide position={"center"} stage={1}>
@@ -174,6 +177,10 @@ const IndexComponent: React.FC = () => {
               películas, sabemos a qué suenan. Esto es gracias al diseño sonoro.
             </div>
           </PopBlock>
+        </div>
+      </Scene>
+      <Scene wide stage={13} background="#151827">
+        <div>
           <PopBlock bg="linear-gradient(135deg, #5ee7df 0%, #b490ca 100%)">
             <h2>Programación de Sonido para plataformas interactivas</h2>
             <div>
@@ -187,21 +194,42 @@ const IndexComponent: React.FC = () => {
               </div>
             </div>
           </PopBlock>
-          <Grid container>
-            <Grid item xs={12} sm={6}>
-              <PopBlock bg="linear-gradient(to right, #a55bbd, #cc2b5e)">
-                <h2 style={{ textAlign: "center" }}>Producción de Streaming</h2>
+          <Grid container justify="space-between" alignItems="center">
+            <Grid item xs={12} sm={12} md={6}>
+              <PopBlock
+                bg="linear-gradient(to right, #a55bbd, #cc2b5e)"
+                style={{
+                  padding: "0.6em",
+                  marginTop: "1em",
+                  marginBottom: "1em",
+                }}
+              >
+                <h3
+                  style={{
+                    textAlign: "center",
+                    margin: isthatNaggyBlock ? "10px 0px" : null,
+                  }}
+                >
+                  Producción de Streaming
+                </h3>
               </PopBlock>
             </Grid>
-            <Grid item xs={12} sm={6}>
-              <PopBlock bg="linear-gradient(to right, #fbc7d4, #9796f0)">
-                <h2 style={{ textAlign: "center" }}>Producción Musical</h2>
+            <Grid item xs={12} sm={12} md={6}>
+              <PopBlock
+                bg="linear-gradient(to right, #fbc7d4, #9796f0)"
+                style={{
+                  padding: "0.6em",
+                  marginTop: "1em",
+                  marginBottom: "1em",
+                }}
+              >
+                <h3 style={{ textAlign: "center" }}>Producción Musical</h3>
               </PopBlock>
             </Grid>
           </Grid>
         </div>
       </Scene>
-      <Scene wide position="center" stage={13} background="#151827">
+      <Scene wide position="center" stage={14} background="#151827">
         <div>
           <h3>
             Bueno, <Username />, quería comentarte que todos los sonidos
@@ -213,7 +241,7 @@ const IndexComponent: React.FC = () => {
           <h3>Vuelve pronto por más sonidos.</h3>
         </div>
       </Scene>
-      <Scene wide position="center" stage={14} background="#151827">
+      <Scene wide position="center" stage={15} background="#151827">
         <FadeWaypoint>
           <div>
             <Grid container>

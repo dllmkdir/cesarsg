@@ -7,6 +7,7 @@ export interface ScrollControlProps {}
 const useStyles = makeStyles(() => ({
   root: {
     position: "fixed",
+    heigth: "100%",
     bottom: 0,
     right: 12,
     maxWidth: "150px",
@@ -29,11 +30,11 @@ const ScrollControl: React.SFC<ScrollControlProps> = () => {
     //   window.innerHeight * 0.9 - (window.scrollY % (window.innerHeight * 0.9))
     let offset = 0
     if (windowResidue >= SceneHeight / 2) {
-      offset = Math.abs(windowResidue - SceneHeight)
+      offset = Math.floor(Math.abs(windowResidue - SceneHeight))
     } else {
-      offset = SceneHeight - windowResidue
+      offset = Math.floor(SceneHeight - windowResidue)
     }
-    if (offset < 2) {
+    if (offset < 3) {
       offset = SceneHeight
     }
     console.log(windowResidue)
@@ -52,11 +53,11 @@ const ScrollControl: React.SFC<ScrollControlProps> = () => {
       window.innerHeight * 0.9 - (window.scrollY % (window.innerHeight * 0.9))
     let offset = 0
     if (windowResidue >= SceneHeight / 2) {
-      offset = Math.abs(windowResidue - SceneHeight)
+      offset = Math.floor(Math.abs(windowResidue - SceneHeight))
     } else {
-      offset = SceneHeight - windowResidue
+      offset = Math.floor(SceneHeight - windowResidue)
     }
-    if (offset < 2) {
+    if (offset < 3) {
       offset = SceneHeight
     }
     console.log(windowResidue)

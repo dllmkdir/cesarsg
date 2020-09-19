@@ -2,6 +2,7 @@ import { makeStyles, Theme } from "@material-ui/core/styles"
 export const useStyles = makeStyles((theme: Theme) => ({
   root: {
     position: "fixed" as "fixed",
+    heigth: "100%",
     display: "flex",
     backgroundColor: "black",
     width: "100%",
