@@ -4,6 +4,8 @@ export const useStyles = makeStyles((theme: Theme) => ({
     display: "flex",
     alignItems: "center",
     minHeight: "90.5vh",
+    // @ts-ignore
+    minHeight: "calc(var(--vh, 1vh) * 90.5)",
     marginLeft: "3em",
     marginRight: "3em",
     fontFamily: "Open sans Semibold",

@@ -40,17 +40,6 @@ const ScrollButton: React.SFC<ScrollButtonProps> = ({
   type,
   children,
 }) => {
-  const [mobileNoAddressBar, setMobileNoAddressBar] = useState(false)
-  useEffect(() => {
-    const resizeEvent = () => {
-      setMobileNoAddressBar(f => !f)
-    }
-    // We listen to the resize event
-    window.addEventListener("resize", resizeEvent)
-    return () => {
-      window.removeEventListener("resize", resizeEvent)
-    }
-  }, [])
   //check media query with hook
   const theme = useTheme()
   const isXS = useMediaQuery(theme.breakpoints.down("xs"))
@@ -92,7 +81,6 @@ const ScrollButton: React.SFC<ScrollButtonProps> = ({
     //prevent initial render
     if (initRef.current) {
       if (stage !== 1) {
-        if (isMobile && !mobileNoAddressBar) return
         setDivProps({ height: 50, width: 50 })
         setArrowProps({ opacity: 1 })
       } else {
