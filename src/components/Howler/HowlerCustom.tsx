@@ -35,18 +35,18 @@ class HowlerCustom extends Component<HowlerCustomProps, HowlerCustomState> {
     var newCount = this.state.internal_volume - 0.05
     if (newCount > 0) {
       this.setState({ internal_volume: newCount })
-      console.log(this.state.internal_volume)
+      //console.log(this.state.internal_volume)
     } else {
       clearInterval(this.interval)
       this.setState({ active: false, inFade: false, internal_volume: 0 })
-      console.log("interval cleared")
+      //console.log("interval cleared")
     }
   }
   timerNotActive = () => {
     var newCount = this.state.internal_volume + 0.05
     if (newCount < this.props.volume) {
       this.setState({ internal_volume: newCount })
-      console.log(this.state.internal_volume)
+      //console.log(this.state.internal_volume)
     } else {
       clearInterval(this.interval)
       this.setState({
@@ -54,7 +54,7 @@ class HowlerCustom extends Component<HowlerCustomProps, HowlerCustomState> {
         inFade: false,
         internal_volume: this.props.volume,
       })
-      console.log("interval cleared")
+      //console.log("interval cleared")
     }
   }
   componentWillReceiveProps(nextProps) {
@@ -64,16 +64,16 @@ class HowlerCustom extends Component<HowlerCustomProps, HowlerCustomState> {
         this.interval = setInterval(() => {
           this.timerActive()
         }, 10)
-        console.log("timercreated")
+        //console.log("timercreated")
       } else {
         this.interval = setInterval(() => {
           this.timerNotActive()
         }, 10)
-        console.log("timercreated")
+        //console.log("timercreated")
       }
     }
     if (this.state.active && nextProps.volume !== this.state.internal_volume) {
-      //console.log("volume missing!")
+      ////console.log("volume missing!")
       this.setState({ internal_volume: nextProps.volume })
     }
   }
