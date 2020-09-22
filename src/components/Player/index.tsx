@@ -47,7 +47,7 @@ const Player: React.FC<PlayerProps> = () => {
   useEffect(() => {
     // First time seeing tooltip
     const initTool: any = localStorage.getItem("csg-vol-tool")
-    //console.log(initTool)
+    console.log(initTool)
     if (!initTool || initTool !== "true") {
       setTooltip(true) //show tooltip
     }

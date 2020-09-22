@@ -23,8 +23,8 @@ const ParticlesWrapper: React.FC<ParticleProps> = ({
   const [render, setRender] = useState<boolean>(false)
   useEffect(() => {
     if (particleNum) {
-      //console.log(particleNum)
-      //console.log(window.innerWidth)
+      console.log(particleNum)
+      console.log(window.innerWidth)
       setRender(true) //Set render to true when particle number has been decided
     }
   }, [particleNum])

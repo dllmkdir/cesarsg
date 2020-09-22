@@ -60,9 +60,9 @@ const ScrollControl: React.SFC<ScrollControlProps> = () => {
     if (offset < 3) {
       offset = SceneHeight
     }
-    //console.log(windowResidue)
-    //console.log(offset)
-    //console.log("TOtal:" + (SceneHeight - offset))
+    console.log(windowResidue)
+    console.log(offset)
+    console.log("TOtal:" + (SceneHeight - offset))
     window.scrollTo({
       top: window.scrollY + offset,
       left: 0,
@@ -88,9 +88,9 @@ const ScrollControl: React.SFC<ScrollControlProps> = () => {
     if (offset < 3) {
       offset = SceneHeight
     }
-    //console.log(windowResidue)
-    //console.log(offset)
-    //console.log("TOtal:" + (SceneHeight - offset))
+    console.log(windowResidue)
+    console.log(offset)
+    console.log("TOtal:" + (SceneHeight - offset))
     window.scrollTo({
       top: window.scrollY - offset,
       left: 0,
